@@ -40,13 +40,13 @@ class DetailMealView extends StatelessWidget {
                       Center(
                         child: Text(
                           meal['strMeal'],
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.network(
@@ -56,7 +56,7 @@ class DetailMealView extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       Row(
                         children: [
                           const Text(
@@ -72,7 +72,7 @@ class DetailMealView extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Row(
                         children: [
                           const Text(
@@ -88,7 +88,7 @@ class DetailMealView extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       const Text(
                         'Instructions :',
                         style: TextStyle(
@@ -96,12 +96,12 @@ class DetailMealView extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.green),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Text(
                         meal['strInstructions'],
                         style: TextStyle(fontSize: 16),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       ElevatedButton(
                         onPressed: () async {
                           var url = meal['strYoutube'];
@@ -113,7 +113,7 @@ class DetailMealView extends StatelessWidget {
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Icon(Icons.play_circle_fill),
                             SizedBox(
                               width: 8,
@@ -127,7 +127,7 @@ class DetailMealView extends StatelessWidget {
                 } else if (snapshot.hasError) {
                   return Text('Error: ${snapshot.error}');
                 } else {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 }
